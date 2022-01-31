@@ -200,13 +200,15 @@ college_recent_grads %>%
 Using the `college_recent_grads` dataset and functions from `{dplyr}`, `arrange` the dataset by `sharewomen`, and `select` only `rank`, `major`, and `sharewomen`. 
 Name your code chunk `highest_prop_women`.
 
-```{r}
-
+```{r highest_prop_women}
+college_recent_grads %>%
+    arrange(desc(sharewomen)) %>%
+    select(rank, major, sharewomen)
 ```
 
 Discuss your output as it relates to the research question.
 
-**Response**:
+**Response**:Early childhood education has the highest amount of women.
 
 
 ![](README-img/noun_pause.png) **Planned Pause Point**: If you have any questions, contact your instructor. Otherwise feel free to continue on.

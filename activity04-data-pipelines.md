@@ -298,9 +298,30 @@ Using the `college_recent_grads` dataset and functions from `{dplyr}`,
 `arrange` the dataset by `sharewomen`, and `select` only `rank`,
 `major`, and `sharewomen`. Name your code chunk `highest_prop_women`.
 
+``` r
+college_recent_grads %>%
+    arrange(desc(sharewomen)) %>%
+    select(rank, major, sharewomen)
+```
+
+    ## # A tibble: 173 x 3
+    ##     rank major                                         sharewomen
+    ##    <dbl> <chr>                                              <dbl>
+    ##  1   165 Early Childhood Education                          0.969
+    ##  2   164 Communication Disorders Sciences And Services      0.968
+    ##  3    52 Medical Assisting Services                         0.928
+    ##  4   139 Elementary Education                               0.924
+    ##  5   151 Family And Consumer Sciences                       0.911
+    ##  6   101 Special Needs Education                            0.907
+    ##  7   157 Human Services And Community Organization          0.906
+    ##  8   152 Social Work                                        0.904
+    ##  9    35 Nursing                                            0.896
+    ## 10    89 Miscellaneous Health Medical Professions           0.881
+    ## # … with 163 more rows
+
 Discuss your output as it relates to the research question.
 
-**Response**:
+**Response**:Early childhood education has the highest amount of women.
 
 ![](README-img/noun_pause.png) **Planned Pause Point**: If you have any
 questions, contact your instructor. Otherwise feel free to continue on.
